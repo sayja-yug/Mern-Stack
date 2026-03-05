@@ -1,0 +1,231 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>TravelBloom</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0e3c47;
+padding:15px 50px;
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+}
+
+/* SEARCH */
+
+.search-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.search-area input{
+padding:8px 15px;
+border-radius:20px;
+border:none;
+width:220px;
+}
+
+.search-area button{
+padding:8px 18px;
+border:none;
+border-radius:20px;
+background:#17a589;
+color:white;
+cursor:pointer;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:90vh;
+background-image:url("city.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:70px;
+color:white;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+
+.hero-content{
+position:relative;
+max-width:500px;
+}
+
+.hero-content h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+margin-bottom:20px;
+line-height:1.6;
+}
+
+.hero-content button{
+padding:12px 25px;
+background:#17a589;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* SOCIAL ICONS */
+
+.social{
+position:absolute;
+left:20px;
+top:200px;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.social img{
+width:22px;
+}
+
+/* RESULTS */
+
+.results{
+padding:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+padding:10px;
+}
+
+.card p{
+padding:0 10px 15px 10px;
+color:#444;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">TravelBloom</div>
+
+<ul>
+<li><a href="travel_recommendation.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+
+<div class="search-area">
+<input id="searchInput" type="text" placeholder="Enter a destination or keyword">
+<button onclick="searchPlace()">Search</button>
+<button onclick="clearResults()">Clear</button>
+</div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="social">
+
+<img src="twitter.png">
+<img src="facebook.png">
+<img src="instagram.png">
+<img src="youtube.png">
+
+</div>
+
+<div class="hero-content">
+
+<h1>EXPLORE DREAM DESTINATION</h1>
+
+<p>
+The Travel Recommendation App helps users explore popular travel
+destinations through an interactive and user-friendly interface.
+Search beaches, temples, or countries to discover amazing places.
+</p>
+
+<button>Book Now</button>
+
+</div>
+
+</section>
+
+
+<h2 style="padding-left:50px;margin-top:30px;">Search Results</h2>
+
+<div id="results" class="results"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
